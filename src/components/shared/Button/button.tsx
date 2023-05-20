@@ -1,8 +1,9 @@
-import { forwardRef } from "react";
-import { ButtonElement, ButtonProps } from "./types";
-import { cn } from "@/utils/cn";
-import { buttonVariants } from "./style";
 import useRipple from "@/hooks/useRipple";
+import { cn } from "@/utils/cn";
+import { forwardRef } from "react";
+import { buttonVariants } from "./style";
+import { ButtonElement, ButtonProps } from "./types";
+import { SpinnerIcon } from "@/components/icons/Spinner";
 
 export const Button = forwardRef<ButtonElement, ButtonProps>(
   (
@@ -13,6 +14,8 @@ export const Button = forwardRef<ButtonElement, ButtonProps>(
       shape,
       shadow,
       ripple = true,
+      isLoading = false,
+      loadingText = "Loading...",
       className,
       ...props
     },
@@ -41,9 +44,17 @@ export const Button = forwardRef<ButtonElement, ButtonProps>(
 
           return typeof onMouseDown === "function" ? onMouseDown(e) : null;
         }}
+        disabled={isLoading}
         {...props}
       >
-        {children}
+        {isLoading ? (
+          <>
+            <SpinnerIcon className="animate-spin h-5 w-5" />
+            <span>{loadingText}</span>
+          </>
+        ) : (
+          <>{children}</>
+        )}
       </button>
     );
   }

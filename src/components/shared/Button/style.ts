@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority";
 
 const buttonVariants = cva(
   [
-    "transition w-fit select-none",
+    "transition w-fit select-none flex items-center justify-center",
     "focus:enabled:outline-none focus:enabled:ring-transparent",
     "focus-visible:enabled:ring-2 focus-visible:ring-offset-2",
     "disabled:cursor-not-allowed disabled:opacity-90 disabled:shadow-none",
@@ -84,7 +84,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "success",
+      variant: "primary",
       size: "md",
     },
   }

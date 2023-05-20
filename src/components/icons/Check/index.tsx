@@ -18,6 +18,6 @@ const CheckIcon = forwardRef<SVGSVGElement, SVGAttributes>(
   }
 );
 
-CheckIcon.displayName = "SVGCheckIcon";
+CheckIcon.displayName = "LCUI-SVGCheckIcon";
 
 export { CheckIcon };

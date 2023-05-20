@@ -8,4 +8,6 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   ripple?: boolean;
+  isLoading?: boolean;
+  loadingText?: string;
 }
