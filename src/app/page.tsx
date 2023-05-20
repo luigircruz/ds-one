@@ -9,6 +9,9 @@ export default function Home() {
       <Link href="/stack" className="hover:underline text-black">
         Stack
       </Link>
+      <Link href="/switch" className="hover:underline text-red-500">
+        Switch
+      </Link>
     </main>
   );
 }
