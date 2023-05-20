@@ -15,6 +15,9 @@ export default function Home() {
       <Link href="/radio" className="hover:underline text-green-500">
         Radio
       </Link>
+      <Link href="/checkbox" className="hover:underline text-yellow-500">
+        Checkbox
+      </Link>
     </main>
   );
 }
