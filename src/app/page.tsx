@@ -18,6 +18,9 @@ export default function Home() {
       <Link href="/checkbox" className="hover:underline text-yellow-500">
         Checkbox
       </Link>
+      <Link href="/icon-button" className="hover:underline text-purple-500">
+        Icon Button
+      </Link>
     </main>
   );
 }
