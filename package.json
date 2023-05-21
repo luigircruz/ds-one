@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "./node_modules/.bin/tsc --noEmit",
+    "ci:check": "yarn typecheck && yarn lint"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.3",
